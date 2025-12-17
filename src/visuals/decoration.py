@@ -1,5 +1,5 @@
 import pygame
-from color import *
+from .color import *
 from enum import Enum
 
 # Baru: Enum untuk tipe dekorasi

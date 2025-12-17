@@ -1,7 +1,7 @@
 import time
 import pygame
 from enum import Enum
-from color import *
+from visuals.color import *
 
 # *** BARU: Konstanta ukuran grid ***
 SHOP_SIZE = 100 # 100x100

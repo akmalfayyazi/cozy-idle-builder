@@ -3,7 +3,7 @@ import pygame
 import math
 import time
 from enum import Enum
-from color import *
+from visuals.color import *
 
 SCREEN_WIDTH = 1200
 # *** BARU: Menambahkan BORDER_THICKNESS di sini untuk konversi ***
@@ -26,22 +26,33 @@ class CustomerState(Enum):
 class Customer:
     customer_images = []
     images_loaded = False
-        
+
     @classmethod
     def load_images(cls):
-        if not cls.images_loaded:
-            try:
-                import os
-                current_dir = os.path.dirname(os.path.abspath(__file__))
-                for i in range(1, 4):
-                    image_path = os.path.join(current_dir, f'foto-{i}.png')
-                    img = pygame.image.load(image_path).convert_alpha()
-                    img = pygame.transform.smoothscale(img, (80, 80))
-                    cls.customer_images.append(img)
-                cls.images_loaded = True
-            except Exception as e:
-                print(f"✗ Error loading customer images: {e}")
-                cls.images_loaded = False
+        if cls.images_loaded:
+            return
+
+        try:
+            import os, pygame
+
+            BASE_DIR = os.path.dirname(
+                os.path.dirname(
+                    os.path.dirname(os.path.abspath(__file__))
+                )
+            )
+            ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+
+            for i in range(1, 4):
+                image_path = os.path.join(ASSETS_DIR, f"foto-{i}.png")
+                img = pygame.image.load(image_path).convert_alpha()
+                img = pygame.transform.smoothscale(img, (80, 80))
+                cls.customer_images.append(img)
+
+            cls.images_loaded = True
+
+        except Exception as e:
+            print(f"✗ Error loading customer images: {e}")
+            cls.images_loaded = False
 
     def __init__(self, target_shop=None, mall_entrance_x=None, mall_entrance_y=None):
         # mall_entrance_x dan y sekarang adalah KOORDINAT DUNIA (sudah + border)

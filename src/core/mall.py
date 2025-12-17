@@ -1,4 +1,4 @@
-from shop import SHOP_SIZE # *** BARU: Impor ukuran grid toko ***
+from .shop import SHOP_SIZE # *** BARU: Impor ukuran grid toko ***
 
 class Mall:
     def __init__(self, width, height):
