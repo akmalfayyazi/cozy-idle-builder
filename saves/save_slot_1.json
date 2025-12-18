@@ -1,0 +1,88 @@
+{
+    "coins": 700,
+    "gems": 50,
+    "level": 1,
+    "xp": 60,
+    "xp_to_next_level": 100,
+    "mall": {
+        "width": 800,
+        "height": 500,
+        "level": 1
+    },
+    "shops": [
+        {
+            "type": "Food",
+            "x": 700,
+            "y": 400,
+            "level": 1,
+            "customers_served": 1
+        },
+        {
+            "type": "Food",
+            "x": 600,
+            "y": 400,
+            "level": 1,
+            "customers_served": 1
+        },
+        {
+            "type": "Food",
+            "x": 0,
+            "y": 400,
+            "level": 1,
+            "customers_served": 0
+        }
+    ],
+    "decorations": [],
+    "quests": [
+        {
+            "description": "Build 3 shops",
+            "target": 3,
+            "progress": 3,
+            "reward_coins": 500,
+            "reward_xp": 50,
+            "completed": true
+        },
+        {
+            "description": "Serve 10 customers",
+            "target": 10,
+            "progress": 0,
+            "reward_coins": 300,
+            "reward_xp": 30,
+            "completed": false
+        },
+        {
+            "description": "Earn 1000 coins",
+            "target": 1000,
+            "progress": 200,
+            "reward_coins": 200,
+            "reward_xp": 40,
+            "completed": false
+        },
+        {
+            "description": "Expand your mall",
+            "target": 1,
+            "progress": 0,
+            "reward_coins": 1000,
+            "reward_xp": 100,
+            "completed": false
+        },
+        {
+            "description": "Build a Cafe",
+            "target": 1,
+            "progress": 1,
+            "reward_coins": 100,
+            "reward_xp": 10,
+            "completed": true
+        },
+        {
+            "description": "Place 5 decorations",
+            "target": 5,
+            "progress": 0,
+            "reward_coins": 200,
+            "reward_xp": 20,
+            "completed": false
+        }
+    ],
+    "timestamp": "2025-12-18 10:30:27",
+    "slot": 1
+}
